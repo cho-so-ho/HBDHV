@@ -4,17 +4,17 @@
     <meta charset="utf-8">
     <title>HBDHV</title>
     <style>
-        body {
+        html, body {
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
+            height: 100%;
         }
 
-        .outer-wrapper {
-            width: 100%;
+        body {
             display: flex;
-            justify-content: center;
+            justify-content: center; /* 가로 중앙 정렬 */
+            align-items: center;     /* 세로 중앙 정렬 */
+            background-color: #fff;
         }
 
         .image-container {
@@ -22,9 +22,9 @@
             overflow-x: auto;
             gap: 10px;
             padding: 10px;
-            max-width: 100%;
-            justify-content: center;
+            max-width: 100vw;
             scroll-snap-type: x mandatory;
+            justify-content: center;
         }
 
         .image-container a {
@@ -34,12 +34,11 @@
 
         .image-container img {
             width: 500px;
-            max-width: 90vw; /* 모바일에서 너무 커지지 않게 */
+            max-width: 90vw; /* 모바일에서 넘치지 않도록 */
             height: auto;
             display: block;
         }
 
-        /* 스크롤바 안 보이게 (선택사항) */
         .image-container::-webkit-scrollbar {
             display: none;
         }
@@ -47,7 +46,6 @@
 </head>
 <body>
 
-<div class="outer-wrapper">
     <div class="image-container">
         <a href="password.html">
             <img src="크로바.jpg" alt="크로바">
@@ -59,7 +57,7 @@
             <img src="정류장.jpg" alt="정류장">
         </a>
     </div>
-</div>
 
 </body>
 </html>
+
