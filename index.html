@@ -23,16 +23,25 @@
             gap: 10px;
             padding: 10px;
             max-width: 100%;
+            justify-content: center;
+            scroll-snap-type: x mandatory;
         }
 
         .image-container a {
             flex: 0 0 auto;
+            scroll-snap-align: center;
         }
 
         .image-container img {
             width: 500px;
+            max-width: 90vw; /* 모바일에서 너무 커지지 않게 */
             height: auto;
             display: block;
+        }
+
+        /* 스크롤바 안 보이게 (선택사항) */
+        .image-container::-webkit-scrollbar {
+            display: none;
         }
     </style>
 </head>
